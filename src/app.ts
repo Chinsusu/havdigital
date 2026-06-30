@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             otherItem.classList.remove('open');
             const otherAnswer = otherItem.querySelector('.faq-answer') as HTMLElement | null;
             if (otherAnswer) {
-              otherAnswer.style.maxHeight = null;
+              otherAnswer.style.maxHeight = '';
             }
           });
           
