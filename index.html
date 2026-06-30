@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HAV Digital Solutions - Dịch vụ Cloud VPS hiệu năng cao, Premium Proxy tốc độ cao và Dedicated Server doanh nghiệp uy tín. Hạ tầng số vượt trội.">
+  <title>HAV Digital Solutions | VPS, Proxy, Dedicated Server Provider</title>
+  
+  <!-- Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Scripts -->
+  <script type="module" src="/src/app.ts"></script>
+</head>
+<body id="home">
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo-link" aria-label="HAV Digital Home">
+        <!-- Temporary SVG Logo -->
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span class="logo-text">HAV Digital</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav id="nav-menu" class="nav-menu">
+        <a href="#services" class="nav-link" data-i18n="navServices">Dịch vụ</a>
+        <a href="#features" class="nav-link" data-i18n="navFeatures">Ưu điểm</a>
+        <a href="#faq" class="nav-link" data-i18n="navFaq">Hỏi đáp</a>
+        <a href="#contact" class="nav-link" data-i18n="navContact">Liên hệ</a>
+        
+        <div class="nav-actions">
+          <!-- Dark/Light Theme Toggle -->
+          <button id="theme-toggle" class="icon-btn theme-toggle" aria-label="Toggle theme">
+            <!-- Sun Icon (shows in Dark mode to switch to Light) -->
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (shows in Light mode to switch to Dark) -->
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Language Toggle (VI/EN) -->
+          <button id="lang-toggle" class="lang-btn" aria-label="Switch Language">EN</button>
+          
+          <!-- Contact Button -->
+          <a href="#contact" class="btn btn-primary btn-sm" data-i18n="navBtnContact">Tư vấn ngay</a>
+        </div>
+      </nav>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button id="hamburger" class="hamburger" aria-label="Open mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 22 22 22"></polygon>
+          </svg>
+          <span>HAV Digital Solutions</span>
+        </div>
+        <h1 class="hero-title" data-i18n="heroTitle">Hạ Tầng Số Vượt Trội Cho Doanh Nghiệp Bạn</h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Giải pháp Cloud VPS hiệu năng cao, Proxy bảo mật và Máy chủ riêng mạnh mẽ giúp doanh nghiệp vận hành mượt mà, bảo mật tối đa và tối ưu chi phí.</p>
+        <div class="hero-ctas">
+          <a href="#services" class="btn btn-primary" data-i18n="heroBtnExplore">Khám phá Dịch vụ</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="heroBtnConsult">Yêu cầu Tư vấn</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <!-- Interactive Tech Card representation (HUD/Code style) -->
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span class="hero-card-title">>_ hav-digital-node-01</span>
+            <div class="hero-card-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-card-line accent"></div>
+            <div class="hero-card-line p-70"></div>
+            <div class="hero-card-line p-85"></div>
+            <div class="hero-card-line p-40"></div>
+            <div class="hero-card-line accent p-70"></div>
+          </div>
+          <div class="hero-card-footer">
+            <span>Uptime: 99.99%</span>
+            <span>RTT: 2.1ms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-val" data-i18n="statUptime">99.99% Uptime</span>
+        <span class="stat-lbl" data-i18n="statUptimeDesc">Cam kết hạ tầng ổn định</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val" data-i18n="statBandwidth">Băng thông cực khủng</span>
+        <span class="stat-lbl" data-i18n="statBandwidthDesc">Kết nối trong nước & quốc tế</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val" data-i18n="statSupport">Hỗ trợ 24/7/365</span>
+        <span class="stat-lbl" data-i18n="statSupportDesc">Kỹ thuật trực tuyến liên tục</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="servicesTitle">Dịch Vụ Chủ Đạo</span>
+        <h2 class="section-title" data-i18n="servicesSubtitle">Các giải pháp hạ tầng máy chủ & kết nối mạng tin cậy được thiết kế để mở rộng cùng doanh nghiệp của bạn.</h2>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Cloud VPS Card -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
+          <h3 class="service-title" data-i18n="vpsTitle">Cloud VPS</h3>
+          <p class="service-desc" data-i18n="vpsDesc">Máy chủ ảo đám mây sử dụng công nghệ ảo hóa KVM hiện đại, ổ cứng NVMe SSD chuyên dụng cho hiệu năng đọc ghi siêu tốc.</p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="vpsFeature1">Vi xử lý AMD EPYC / Intel Xeon Gold thế hệ mới</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="vpsFeature2">Lưu trữ NVMe SSD Enterprise (RAID 10)</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="vpsFeature3">Cổng mạng 1Gbps - 10Gbps không giới hạn băng thông</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="vpsFeature4">Hệ điều hành Linux/Windows cài đặt tự động</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="vpsFeature5">Quản trị dễ dàng: Reinstall, VNC, Reboot tức thì</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary" data-i18n="vpsBtn">Nhận tư vấn cấu hình VPS</a>
+        </div>
+
+        <!-- Premium Proxy Card -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <h3 class="service-title" data-i18n="proxyTitle">Premium Proxy</h3>
+          <p class="service-desc" data-i18n="proxyDesc">Dịch vụ Proxy cá nhân tốc độ cao, độ trễ cực thấp. Hoàn hảo cho việc nuôi tài khoản, cào dữ liệu và marketing online.</p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="proxyFeature1">Đa dạng thể loại: IPv4, IPv6, Residential, Datacenter</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="proxyFeature2">Hỗ trợ đầy đủ giao thức HTTP, HTTPS và SOCKS5</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="proxyFeature3">Độ trễ (Latency) cực thấp, tốc độ tải tối đa</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="proxyFeature4">Bảo mật cao, không log thông tin người dùng</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="proxyFeature5">Kích hoạt tự động, thay đổi IP linh hoạt</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary" data-i18n="proxyBtn">Yêu cầu báo giá Proxy</a>
+        </div>
+
+        <!-- Dedicated Server Card -->
+        <div class="service-card">
+          <div class="service-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect>
+              <path d="M2 10h20"></path>
+              <path d="M2 14h20"></path>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
+          <h3 class="service-title" data-i18n="dedicatedTitle">Dedicated Server</h3>
+          <p class="service-desc" data-i18n="dedicatedDesc">Cho thuê máy chủ vật lý riêng biệt với 100% tài nguyên phần cứng chuyên dụng. Đảm bảo hiệu suất tối đa và tính riêng tư tuyệt đối.</p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="dedicatedFeature1">Phần cứng chính hãng Dell, HP cấu hình cực mạnh</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="dedicatedFeature2">Tùy biến linh hoạt CPU, RAM, ổ cứng theo yêu cầu</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="dedicatedFeature3">Tích hợp sẵn tường lửa chống DDoS chuyên sâu</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="dedicatedFeature4">Bàn giao kèm quyền quản trị cao nhất qua IPMI/iDRAC</span>
+            </li>
+            <li class="service-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span data-i18n="dedicatedFeature5">Uptime 99.99% được giám sát liên tục 24/7</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary" data-i18n="dedicatedBtn">Liên hệ cấu hình Server riêng</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section (Bento Grid) -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="featuresTitle">Tại Sao Nên Chọn HAV Digital?</span>
+        <h2 class="section-title" data-i18n="featuresSubtitle">Chúng tôi không chỉ cung cấp dịch vụ máy chủ, chúng tôi đồng hành cùng sự phát triển của bạn.</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento Card 1 (Large) -->
+        <div class="bento-card bento-card-large">
+          <div class="bento-card-header">
+            <div class="bento-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="bento-card-title" data-i18n="featureSpeedTitle">Tốc độ vượt trội</h3>
+          </div>
+          <p class="bento-card-desc" data-i18n="featureSpeedDesc">Sử dụng 100% phần cứng thế hệ mới nhất cùng hệ thống kết nối mạng Core Switch băng thông lớn.</p>
+        </div>
+
+        <!-- Bento Card 2 -->
+        <div class="bento-card">
+          <div class="bento-card-header">
+            <div class="bento-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="bento-card-title" data-i18n="featureSecureTitle">An toàn thông tin</h3>
+          </div>
+          <p class="bento-card-desc" data-i18n="featureSecureDesc">Mã hóa dữ liệu cấp độ cao kết hợp hệ thống bảo mật đa tầng chặn đứng mọi nguy cơ tấn công.</p>
+        </div>
+
+        <!-- Bento Card 3 -->
+        <div class="bento-card">
+          <div class="bento-card-header">
+            <div class="bento-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="bento-card-title" data-i18n="featureAutoTitle">Kích hoạt tức thì</h3>
+          </div>
+          <p class="bento-card-desc" data-i18n="featureAutoDesc">Không cần chờ đợi. Hệ thống tự động triển khai Cloud VPS và cung cấp Proxy ngay sau khi thanh toán.</p>
+        </div>
+
+        <!-- Bento Card 4 (Large) -->
+        <div class="bento-card bento-card-large">
+          <div class="bento-card-header">
+            <div class="bento-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="bento-card-title" data-i18n="featureSupportTitle">Kỹ thuật túc trực 24/7</h3>
+          </div>
+          <p class="bento-card-desc" data-i18n="featureSupportDesc">Giải quyết sự cố nhanh chóng. Kỹ thuật viên giàu kinh nghiệm hỗ trợ trực tiếp không qua trung gian.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="faqTitle">Câu Hỏi Thường Gặp</span>
+        <h2 class="section-title" data-i18n="faqSubtitle">Những thắc mắc phổ biến về dịch vụ của HAV Digital.</h2>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faqQ1">Tôi có thể cài đặt hệ điều hành gì trên Cloud VPS?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faqA1">
+              Hệ thống hỗ trợ tự động cài đặt các bản phân phối Linux phổ biến như Ubuntu, CentOS, Debian, AlmaLinux và cả Windows Server phiên bản mới nhất.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faqQ2">Proxy của HAV Digital hỗ trợ các giao thức nào?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faqA2">
+              Toàn bộ dịch vụ Proxy của chúng tôi đều hỗ trợ đồng thời các giao thức HTTP, HTTPS và SOCKS5, tương thích hoàn toàn với các phần mềm nuôi nick, bot, và trình duyệt ẩn danh.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faqQ3">Thời gian bàn giao máy chủ riêng Dedicated Server là bao lâu?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faqA3">
+              Đối với cấu hình máy chủ tiêu chuẩn có sẵn, thời gian bàn giao chỉ từ 2 đến 4 giờ. Với các cấu hình tùy chọn lắp ráp riêng theo yêu cầu, thời gian bàn giao tối đa là 24 giờ kể từ khi xác nhận đơn hàng.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faqQ4">Tôi có được hỗ trợ cài đặt ban đầu không?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner" data-i18n="faqA4">
+              Có. HAV Digital hỗ trợ miễn phí cài đặt hệ điều hành, cấu hình mạng cơ bản, cài đặt web server (Nginx/Apache) hoặc control panel thông dụng (CyberPanel, AAPanel) cho khách hàng mới.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2 data-i18n="contactTitle">Yêu Cầu Tư Vấn Dịch Vụ</h2>
+        <p class="contact-info-desc" data-i18n="contactSubtitle">Hãy để lại thông tin, đội ngũ kỹ sư của HAV Digital sẽ liên hệ hỗ trợ bạn thiết lập cấu hình tối ưu nhất trong vòng 15 phút.</p>
+        
+        <div class="contact-details">
+          <!-- Support Email -->
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <p style="font-weight: 600;">Email</p>
+              <a href="mailto:support@havdigital.com" style="opacity: 0.85;">support@havdigital.com</a>
+            </div>
+          </div>
+
+          <!-- Phone Number (TBA) -->
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <p style="font-weight: 600;">Hotline</p>
+              <p class="text-muted" data-i18n="footerInfoPhone">Điện thoại: Đang cập nhật</p>
+            </div>
+          </div>
+
+          <!-- Address (TBA) -->
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <p style="font-weight: 600;">Office Address</p>
+              <p class="text-muted" data-i18n="footerInfoAddress">Địa chỉ: Đang cập nhật</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper">
+        <div id="form-alert" class="form-alert"></div>
+        
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label" data-i18n="labelName">Họ và Tên</label>
+            <input type="text" id="name" class="form-input" required data-i18n-placeholder="labelName">
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label" data-i18n="labelEmail">Địa chỉ Email</label>
+            <input type="email" id="email" class="form-input" required placeholder="name@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="service" class="form-label" data-i18n="labelService">Dịch vụ bạn quan tâm</label>
+            <select id="service" class="form-input" required>
+              <option value="" disabled selected data-i18n="selectPlaceholder">-- Chọn dịch vụ quan tâm --</option>
+              <option value="vps" data-i18n="optionVps">Cloud VPS (Máy chủ ảo)</option>
+              <option value="proxy" data-i18n="optionProxy">Premium Proxy (IPv4 / IPv6 / Dân cư)</option>
+              <option value="dedicated" data-i18n="optionDedicated">Dedicated Server (Máy chủ vật lý riêng)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label" data-i18n="labelMessage">Yêu cầu cụ thể</label>
+            <textarea id="message" class="form-input" required data-i18n-placeholder="labelMessage"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary mt-sm" style="width: 100%;" data-i18n="btnSubmit">Gửi Yêu Cầu Liên Hệ</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo-link">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span class="logo-text">HAV Digital</span>
+        </a>
+        <p class="footer-desc" data-i18n="footerDesc">Nhà cung cấp hạ tầng số tin cậy hàng đầu. Chuyên cung cấp Cloud VPS, Proxy tốc độ cao và Dedicated Server doanh nghiệp.</p>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title" data-i18n="footerLinksTitle">Liên kết nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="#services" data-i18n="navServices">Dịch vụ</a></li>
+          <li><a href="#features" data-i18n="navFeatures">Ưu điểm</a></li>
+          <li><a href="#faq" data-i18n="navFaq">Hỏi đáp</a></li>
+          <li><a href="#contact" data-i18n="navContact">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title" data-i18n="footerInfoTitle">Thông tin liên hệ</h4>
+        <ul class="footer-info">
+          <li data-i18n="footerInfoAddress">Địa chỉ: Đang cập nhật</li>
+          <li data-i18n="footerInfoPhone">Điện thoại: Đang cập nhật</li>
+          <li>Email: <a href="mailto:support@havdigital.com" style="color: var(--color-primary);">support@havdigital.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p data-i18n="footerCopyright">© 2026 Công ty TNHH Giải pháp Số HAV. Bảo lưu mọi quyền.</p>
+      
+      <!-- Social links -->
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Github">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
