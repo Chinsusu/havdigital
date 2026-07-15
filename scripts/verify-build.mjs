@@ -38,7 +38,7 @@ const requiredOutput = [
   'dist/_headers',
   'dist/robots.txt',
   'dist/sitemap.xml',
-  'dist/assets/analytics.v1.js',
+  'dist/assets/site-preferences.v1.js',
 ];
 
 for (const path of requiredOutput) {
@@ -59,13 +59,13 @@ for (const route of publicRoutes.filter((route) => route !== 'index')) {
 const outputFiles = walk(distDir);
 const bundledScripts = outputFiles.filter((path) => ['.js', '.mjs', '.cjs'].includes(extname(path)))
   .map((path) => relative(distDir, path))
-  .filter((path) => path !== 'assets/analytics.v1.js');
+  .filter((path) => path !== 'assets/site-preferences.v1.js');
 assert.deepEqual(bundledScripts, [], `Unexpected client scripts emitted: ${bundledScripts.join(', ')}`);
 
 for (const path of outputFiles.filter((file) => extname(file) === '.html')) {
   const html = readFileSync(path, 'utf8');
   assert.doesNotMatch(html, /src="\/_astro\/[^\"]+\.js"/i, `Bundled client script found in ${relative(distDir, path)}`);
-  assert.match(html, /src="\/assets\/analytics\.v1\.js"/, `Analytics consent loader missing in ${relative(distDir, path)}`);
+  assert.match(html, /src="\/assets\/site-preferences\.v1\.js"/, `Analytics consent loader missing in ${relative(distDir, path)}`);
   assert.doesNotMatch(html, /href="\/[^"]+\.html(?:[?#"])/i, `Legacy .html internal link in ${relative(distDir, path)}`);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, `Expected one H1 in ${relative(distDir, path)}`);
 
@@ -154,7 +154,7 @@ for (const expected of [
   assert.ok(headers.includes(expected), `Security header regression: missing ${expected}`);
 }
 
-const analytics = read('dist/assets/analytics.v1.js');
+const analytics = read('dist/assets/site-preferences.v1.js');
 for (const event of ['view_product', 'select_plan', 'start_checkout', 'sign_up', 'purchase', 'contact_sales']) {
   assert.ok(analytics.includes(`'${event}'`), `Analytics event is not supported: ${event}`);
 }

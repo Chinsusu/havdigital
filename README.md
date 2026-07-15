@@ -29,7 +29,7 @@ npm run preview
 
 Astro produces a fully static site in `dist/`. The only intentional client-side
 JavaScript is the versioned consent/event module at
-`public/assets/analytics.v1.js`; page rendering does not require JavaScript.
+`public/assets/site-preferences.v1.js`; page rendering does not require JavaScript.
 
 ## Measurement
 
