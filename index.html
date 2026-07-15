@@ -90,6 +90,7 @@
     .stat+.stat{border-left:1px solid var(--gray-300)}
     .metric{display:block;margin-bottom:2px;font-size:26px;font-weight:500;line-height:1.1}
     .stat-label{display:block;color:var(--gray-600);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .stats-note{max-width:820px;margin:10px auto 0;color:var(--gray-600);font-size:12px;line-height:1.5;text-align:left}
     .proxy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .proxy-card{min-height:100%;display:flex;flex-direction:column;padding:30px 27px;border:1px solid var(--gray-300);border-radius:8px;background:var(--white);transition:border-color .15s}
     .proxy-card:hover{border-color:var(--uplink)}
@@ -217,7 +218,7 @@
         <div class="hero-copy">
           <p class="eyebrow">Proxy dân cư · ISP · Datacenter</p>
           <h1 id="hero-title">Proxy phủ <span class="accent">190+ quốc gia.</span><br>IP sạch, xoay theo ý bạn.</h1>
-          <p class="hero-sub">Hàng triệu IP thật trên toàn cầu. Target đến quốc gia, thành phố hoặc nhà mạng trong chuỗi kết nối. Quản lý trực tiếp qua dashboard hoặc API.</p>
+          <p class="hero-sub">Tiếp cận mạng lưới IP toàn cầu. Target đến quốc gia, thành phố hoặc nhà mạng trong chuỗi kết nối. Quản lý trực tiếp qua dashboard hoặc API.</p>
           <div class="hero-actions">
             <a class="btn btn--primary" href="#proxy">Xem gói proxy</a>
             <a class="btn btn--ghost" href="#coverage">Khám phá vùng phủ</a>
@@ -876,10 +877,11 @@
         </div>
         <div class="stats-strip" aria-label="Chỉ số dịch vụ">
           <div class="stat"><strong class="metric accent">190+</strong><span class="stat-label">Quốc gia</span></div>
-          <div class="stat"><strong class="metric">10M+</strong><span class="stat-label">IP trong pool</span></div>
-          <div class="stat"><strong class="metric">99.9%</strong><span class="stat-label">Uptime</span></div>
-          <div class="stat"><strong class="metric">&lt;0.5s</strong><span class="stat-label">Độ trễ xoay IP</span></div>
+          <div class="stat"><strong class="metric">10M+</strong><span class="stat-label">IP có thể tiếp cận*</span></div>
+          <div class="stat"><strong class="metric">99.9%</strong><span class="stat-label">Mục tiêu uptime*</span></div>
+          <div class="stat"><strong class="metric">&lt;0.5s</strong><span class="stat-label">Mục tiêu xoay IP*</span></div>
         </div>
+        <p class="stats-note">* Quy mô pool là ước tính và các chỉ số hiệu năng là mục tiêu vận hành. IP khả dụng, uptime và độ trễ thực tế thay đổi theo location, ASN, thời điểm và điều kiện sử dụng.</p>
       </div>
     </section>
 
@@ -888,7 +890,7 @@
         <header class="section-head section-head--center">
           <p class="eyebrow">Sản phẩm chính</p>
           <h2 id="proxy-title">Ba loại proxy, một chuẩn chất lượng</h2>
-          <p class="section-sub">Mọi IP đều được kiểm blacklist trước khi giao, hỗ trợ HTTP &amp; SOCKS5, xác thực bằng user:pass hoặc whitelist IP.</p>
+          <p class="section-sub">IP được sàng lọc blacklist trước khi cấp, hỗ trợ HTTP &amp; SOCKS5, xác thực bằng user:pass hoặc whitelist IP. Reputation có thể thay đổi theo thời điểm và cách sử dụng.</p>
         </header>
         <div class="proxy-grid">
           <article class="proxy-card">
@@ -898,7 +900,7 @@
             <ul class="feature-list">
               <li>Target theo quốc gia, thành phố hoặc ASN</li>
               <li>Xoay mỗi request hoặc sticky 1–30 phút</li>
-              <li>Pool 10M+ tự động loại IP chết</li>
+              <li>Tiếp cận pool 10M+; lọc IP không phản hồi</li>
               <li>Trả theo GB, không giới hạn luồng</li>
             </ul>
             <div class="price-wrap"><span class="price">60.000₫/GB</span><small class="price-note">Thanh toán theo dung lượng</small></div>
@@ -912,7 +914,7 @@
               <li>IP riêng 100%, độc quyền cho bạn</li>
               <li>Giữ IP vô thời hạn khi còn gia hạn</li>
               <li>Băng thông không giới hạn 1Gbps</li>
-              <li>Đổi IP miễn phí nếu bị blacklist</li>
+              <li>Hỗ trợ đổi IP theo chính sách blacklist</li>
             </ul>
             <div class="price-wrap"><span class="price">90.000₫/IP/tháng</span><small class="price-note">Thanh toán theo tháng</small></div>
             <a class="btn btn--primary btn--full" href="mailto:sales@havdigital.com?subject=Đăng%20ký%201%20IP%20Proxy%20ISP">Chọn 1 IP ISP</a>
@@ -923,7 +925,7 @@
             <p class="card-desc">Độ trễ thấp cho tác vụ kỹ thuật, game, bot, crawl tốc độ cao và kiểm thử hạ tầng.</p>
             <ul class="feature-list">
               <li>Độ trễ thấp, kết nối ổn định</li>
-              <li>Dải IP sạch, kiểm tra trước khi giao</li>
+              <li>Dải IP được sàng lọc trước khi giao</li>
               <li>Mua lẻ hoặc theo dải /29, /28</li>
               <li>Kích hoạt trong khoảng 5 phút</li>
             </ul>
@@ -1014,10 +1016,10 @@
         <span class="status"><span class="status-dot" aria-hidden="true"></span><span class="status-copy">all systems operational</span></span>
       </div>
       <nav class="footer-links" aria-label="Liên kết cuối trang">
-        <a href="/terms.html">Điều khoản</a>
-        <a href="/refund-policy.html">Chính sách hoàn tiền</a>
-        <a href="/api-docs.html">API Docs</a>
-        <a href="/status.html">Trạng thái hệ thống</a>
+        <a href="/terms">Điều khoản</a>
+        <a href="/refund-policy">Chính sách hoàn tiền</a>
+        <a href="/api-docs">API Docs</a>
+        <a href="/status">Trạng thái hệ thống</a>
       </nav>
     </div>
   </footer>
