@@ -1,0 +1,121 @@
+<section
+  class="analytics-consent"
+  data-analytics-consent
+  role="dialog"
+  aria-labelledby="analytics-consent-title"
+  aria-describedby="analytics-consent-description"
+  hidden
+>
+  <div>
+    <strong id="analytics-consent-title">Đo lường để cải thiện website</strong>
+    <p id="analytics-consent-description">
+      HAV chỉ tải Google Analytics khi bạn đồng ý. Cloudflare Web Analytics được dùng cho số liệu hiệu năng tối thiểu.
+      Xem <a href="/privacy">Chính sách quyền riêng tư</a>.
+    </p>
+  </div>
+  <div class="analytics-consent__actions">
+    <button type="button" class="analytics-consent__secondary" data-analytics-reject>Chỉ cần thiết</button>
+    <button type="button" class="analytics-consent__primary" data-analytics-accept>Đồng ý đo lường</button>
+  </div>
+</section>
+
+<script
+  is:inline
+  src="/assets/analytics.v1.js"
+  defer
+  data-measurement-id="G-ZK5R31BNP4"
+></script>
+
+<style is:global>
+  .analytics-consent[hidden] {
+    display: none;
+  }
+
+  .analytics-consent {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+    z-index: 1000;
+    width: min(calc(100% - 36px), 760px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 20px;
+    border: 1px solid #d7dbe0;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 18px 50px rgb(15 20 25 / 18%);
+    color: #0f1419;
+    font: 14px/1.5 Inter, system-ui, sans-serif;
+  }
+
+  .analytics-consent strong {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Space Grotesk", Inter, sans-serif;
+    font-size: 16px;
+  }
+
+  .analytics-consent p {
+    margin: 0;
+    color: #5b6470;
+  }
+
+  .analytics-consent a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .analytics-consent__actions {
+    display: flex;
+    flex: none;
+    gap: 9px;
+  }
+
+  .analytics-consent button {
+    min-height: 42px;
+    padding: 9px 14px;
+    border: 1px solid #0f1419;
+    border-radius: 6px;
+    font: 600 13px/1.1 Inter, system-ui, sans-serif;
+    cursor: pointer;
+  }
+
+  .analytics-consent button:focus-visible {
+    outline: 3px solid color-mix(in srgb, #00c878 65%, white);
+    outline-offset: 3px;
+  }
+
+  .analytics-consent__secondary {
+    background: #ffffff;
+    color: #0f1419;
+  }
+
+  .analytics-consent__primary {
+    background: #00c878;
+    color: #0f1419;
+  }
+
+  @media (max-width: 680px) {
+    .analytics-consent {
+      align-items: stretch;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .analytics-consent__actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .analytics-consent__actions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

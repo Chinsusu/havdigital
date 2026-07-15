@@ -1,3 +1,32 @@
+---
+import AnalyticsConsent from '../components/AnalyticsConsent.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://havdigital.com/#organization',
+      name: 'HAV Digital Solutions',
+      url: 'https://havdigital.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://havdigital.com/assets/hav-logo.svg',
+      },
+      email: 'sales@havdigital.com',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://havdigital.com/#website',
+      url: 'https://havdigital.com/',
+      name: 'HAV Digital Solutions',
+      inLanguage: 'vi',
+      publisher: { '@id': 'https://havdigital.com/#organization' },
+    },
+  ],
+};
+---
+
 <!doctype html>
 <html lang="vi">
 <head>
@@ -23,7 +52,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
-  <style>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+  <style is:global>
     :root{
       --ink:#0F1419;--gray-600:#5B6470;--gray-300:#D7DBE0;--gray-100:#F5F6F8;
       --white:#FFFFFF;--uplink:#00C878;--uplink-dark:#00A263;--header-h:64px;
@@ -136,10 +166,10 @@
     .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
     .footer-left,.footer-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
     .status{display:inline-flex;align-items:center;gap:8px}
-    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--uplink);animation:status-pulse 2s ease-out infinite}
-    @keyframes status-pulse{0%{box-shadow:0 0 0 0 rgba(0,200,120,.42)}70%{box-shadow:0 0 0 8px rgba(0,200,120,0)}100%{box-shadow:0 0 0 0 rgba(0,200,120,0)}}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-600)}
     .status-copy{font-size:12px}
-    .footer-links a:hover{color:var(--ink)}
+    .footer-links a:hover,.footer-links button:hover{color:var(--ink)}
+    .footer-links button{padding:0;border:0;background:transparent;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
     @media (max-width:1000px){
       .cap-layout{grid-template-columns:1fr;gap:30px}
       .cap-grid{grid-template-columns:repeat(2,1fr)}
@@ -885,7 +915,7 @@
       </div>
     </section>
 
-    <section class="section" id="proxy" aria-labelledby="proxy-title">
+    <section class="section" id="proxy" aria-labelledby="proxy-title" data-analytics-view-product="proxy">
       <div class="container">
         <header class="section-head section-head--center">
           <p class="eyebrow">Sản phẩm chính</p>
@@ -904,7 +934,7 @@
               <li>Trả theo GB, không giới hạn luồng</li>
             </ul>
             <div class="price-wrap"><span class="price">60.000₫/GB</span><small class="price-note">Thanh toán theo dung lượng</small></div>
-            <a class="btn btn--primary btn--full" href="mailto:sales@havdigital.com?subject=Bắt%20đầu%20Proxy%20dân%20cư%20xoay%20-%201%20GB">Bắt đầu với 1 GB</a>
+            <a class="btn btn--primary btn--full" href="/contact?service=residential&amp;plan=1gb" data-analytics-event="select_plan" data-analytics-service="residential-proxy" data-analytics-plan="1gb">Bắt đầu với 1 GB</a>
           </article>
           <article class="proxy-card">
             <span class="key">isp · static residential</span>
@@ -917,7 +947,7 @@
               <li>Hỗ trợ đổi IP theo chính sách blacklist</li>
             </ul>
             <div class="price-wrap"><span class="price">90.000₫/IP/tháng</span><small class="price-note">Thanh toán theo tháng</small></div>
-            <a class="btn btn--primary btn--full" href="mailto:sales@havdigital.com?subject=Đăng%20ký%201%20IP%20Proxy%20ISP">Chọn 1 IP ISP</a>
+            <a class="btn btn--primary btn--full" href="/contact?service=isp&amp;plan=1ip" data-analytics-event="select_plan" data-analytics-service="isp-proxy" data-analytics-plan="1ip">Chọn 1 IP ISP</a>
           </article>
           <article class="proxy-card">
             <span class="key">datacenter · private</span>
@@ -930,7 +960,7 @@
               <li>Kích hoạt trong khoảng 5 phút</li>
             </ul>
             <div class="price-wrap"><span class="price">25.000₫/IP/tháng</span><small class="price-note">Thanh toán theo tháng</small></div>
-            <a class="btn btn--primary btn--full" href="mailto:sales@havdigital.com?subject=Mua%20Proxy%20datacenter%20riêng">Mua IP datacenter</a>
+            <a class="btn btn--primary btn--full" href="/contact?service=datacenter" data-analytics-event="select_plan" data-analytics-service="datacenter-proxy" data-analytics-plan="custom">Mua IP datacenter</a>
           </article>
         </div>
       </div>
@@ -972,7 +1002,7 @@
       </div>
     </section>
 
-    <section class="section section--muted" id="vps" aria-labelledby="vps-title">
+    <section class="section section--muted" id="vps" aria-labelledby="vps-title" data-analytics-view-product="vps">
       <div class="container vps-layout">
         <div class="vps-copy">
           <p class="eyebrow">Sản phẩm kèm theo</p>
@@ -990,9 +1020,9 @@
             <caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Bảng gói VPS NVMe</caption>
             <thead><tr><th>Gói</th><th>vCPU</th><th>RAM</th><th>NVMe</th><th>Giá</th><th></th></tr></thead>
             <tbody>
-              <tr><td data-label="Gói">NVMe-1</td><td data-label="vCPU">1</td><td data-label="RAM">1 GB</td><td data-label="NVMe">25 GB</td><td data-label="Giá">99.000₫/tháng</td><td data-label=""><a class="btn btn--ghost" href="mailto:sales@havdigital.com?subject=Đăng%20ký%20VPS%20NVMe-1">Chọn NVMe-1</a></td></tr>
-              <tr><td data-label="Gói">NVMe-2</td><td data-label="vCPU">2</td><td data-label="RAM">2 GB</td><td data-label="NVMe">50 GB</td><td data-label="Giá">189.000₫/tháng</td><td data-label=""><a class="btn btn--primary" href="mailto:sales@havdigital.com?subject=Đăng%20ký%20VPS%20NVMe-2">Chọn NVMe-2</a></td></tr>
-              <tr><td data-label="Gói">NVMe-4</td><td data-label="vCPU">4</td><td data-label="RAM">4 GB</td><td data-label="NVMe">100 GB</td><td data-label="Giá">399.000₫/tháng</td><td data-label=""><a class="btn btn--ghost" href="mailto:sales@havdigital.com?subject=Đăng%20ký%20VPS%20NVMe-4">Chọn NVMe-4</a></td></tr>
+              <tr><td data-label="Gói">NVMe-1</td><td data-label="vCPU">1</td><td data-label="RAM">1 GB</td><td data-label="NVMe">25 GB</td><td data-label="Giá">99.000₫/tháng</td><td data-label=""><a class="btn btn--ghost" href="/contact?service=vps&amp;plan=nvme-1" data-analytics-event="select_plan" data-analytics-service="vps" data-analytics-plan="nvme-1">Chọn NVMe-1</a></td></tr>
+              <tr><td data-label="Gói">NVMe-2</td><td data-label="vCPU">2</td><td data-label="RAM">2 GB</td><td data-label="NVMe">50 GB</td><td data-label="Giá">189.000₫/tháng</td><td data-label=""><a class="btn btn--primary" href="/contact?service=vps&amp;plan=nvme-2" data-analytics-event="select_plan" data-analytics-service="vps" data-analytics-plan="nvme-2">Chọn NVMe-2</a></td></tr>
+              <tr><td data-label="Gói">NVMe-4</td><td data-label="vCPU">4</td><td data-label="RAM">4 GB</td><td data-label="NVMe">100 GB</td><td data-label="Giá">399.000₫/tháng</td><td data-label=""><a class="btn btn--ghost" href="/contact?service=vps&amp;plan=nvme-4" data-analytics-event="select_plan" data-analytics-service="vps" data-analytics-plan="nvme-4">Chọn NVMe-4</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1003,7 +1033,7 @@
       <div class="container">
         <div class="cta-box">
           <div><h2 id="cta-title">Chọn location đầu tiên của bạn</h2><p>Gửi use case và thị trường cần target. Chúng tôi trả lời bằng cấu hình cụ thể.</p></div>
-          <a class="btn btn--primary" href="mailto:sales@havdigital.com?subject=Chọn%20location%20proxy%20đầu%20tiên">Chọn location</a>
+          <a class="btn btn--primary" href="/contact?service=proxy&amp;intent=location" data-analytics-event="contact_sales" data-analytics-service="proxy" data-analytics-location="custom">Chọn location</a>
         </div>
       </div>
     </section>
@@ -1013,15 +1043,22 @@
     <div class="container footer-inner">
       <div class="footer-left">
         <span>© 2026 havdigital.com</span>
-        <span class="status"><span class="status-dot" aria-hidden="true"></span><span class="status-copy">all systems operational</span></span>
+        <a class="status" href="/status"><span class="status-dot" aria-hidden="true"></span><span class="status-copy">xem trạng thái vận hành</span></a>
       </div>
       <nav class="footer-links" aria-label="Liên kết cuối trang">
+        <a href="/about">Giới thiệu</a>
+        <a href="/contact">Liên hệ</a>
+        <a href="/privacy">Quyền riêng tư</a>
         <a href="/terms">Điều khoản</a>
-        <a href="/refund-policy">Chính sách hoàn tiền</a>
+        <a href="/refund-policy">Hoàn tiền</a>
+        <a href="/acceptable-use">AUP</a>
+        <a href="/abuse">Báo cáo lạm dụng</a>
+        <a href="/sla">Mục tiêu dịch vụ</a>
         <a href="/api-docs">API Docs</a>
-        <a href="/status">Trạng thái hệ thống</a>
+        <button type="button" data-analytics-consent-open>Tuỳ chọn đo lường</button>
       </nav>
     </div>
   </footer>
+  <AnalyticsConsent />
 </body>
 </html>

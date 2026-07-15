@@ -1,0 +1,47 @@
+---
+import DocumentLayout from './DocumentLayout.astro';
+
+interface Frontmatter {
+  title: string;
+  description?: string;
+  route: string;
+  lastUpdated?: string;
+  indexable?: boolean;
+  section?: string;
+}
+
+interface Props {
+  frontmatter: Frontmatter;
+}
+
+const { frontmatter } = Astro.props;
+const sectionLabels: Record<string, string> = {
+  legal: 'Pháp lý',
+  trust: 'Thông tin tin cậy',
+  operations: 'Vận hành',
+};
+
+const eyebrow = sectionLabels[frontmatter.section ?? ''] ?? 'HAV Digital Solutions';
+const updated = frontmatter.lastUpdated
+  ? new Intl.DateTimeFormat('vi-VN', { dateStyle: 'long', timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date(`${frontmatter.lastUpdated}T00:00:00+07:00`))
+  : undefined;
+---
+
+<DocumentLayout
+  title={frontmatter.title}
+  eyebrow={eyebrow}
+  description={frontmatter.description}
+  canonicalPath={frontmatter.route}
+  robots={frontmatter.indexable === false ? 'noindex,follow' : undefined}
+>
+  {updated && <p class="document-updated">Cập nhật lần cuối: {updated}</p>}
+  <slot />
+</DocumentLayout>
+
+<style is:global>
+  .document-updated {
+    margin-bottom: 24px;
+    color: var(--gray-600);
+    font-size: 13px;
+  }
+</style>

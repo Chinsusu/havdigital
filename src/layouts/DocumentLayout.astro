@@ -1,0 +1,258 @@
+---
+import BrandMark from '../components/BrandMark.astro';
+import DocumentHead from '../components/DocumentHead.astro';
+import AnalyticsConsent from '../components/AnalyticsConsent.astro';
+
+interface Props {
+  title: string;
+  heading?: string;
+  eyebrow: string;
+  description?: string;
+  canonicalPath?: string;
+  robots?: string;
+}
+
+const {
+  title,
+  heading,
+  eyebrow,
+  description,
+  canonicalPath,
+  robots,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <DocumentHead
+      title={title}
+      description={description}
+      canonicalPath={canonicalPath}
+      robots={robots}
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+    <div class="shell">
+      <div class="top">
+        <BrandMark />
+        <a class="back" href="/">← Về trang chủ</a>
+      </div>
+      <main id="main">
+        <article>
+          <p class="eyebrow">{eyebrow}</p>
+          {heading && <h1>{heading}</h1>}
+          <slot />
+        </article>
+      </main>
+      <footer>
+        <span>© 2026 HAV Digital Solutions</span>
+        <nav aria-label="Liên kết cuối trang">
+          <a href="/about">Giới thiệu</a>
+          <a href="/contact">Liên hệ</a>
+          <a href="/privacy">Quyền riêng tư</a>
+          <a href="/acceptable-use">AUP</a>
+          <a href="/abuse">Báo cáo lạm dụng</a>
+          <button type="button" data-analytics-consent-open>Tuỳ chọn đo lường</button>
+        </nav>
+      </footer>
+    </div>
+    <AnalyticsConsent />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --ink: #0f1419;
+    --gray-600: #5b6470;
+    --gray-300: #d7dbe0;
+    --gray-100: #f5f6f8;
+    --white: #ffffff;
+    --uplink: #00c878;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--gray-100);
+    color: var(--ink);
+    font-family: Inter, system-ui, sans-serif;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--uplink) 65%, white);
+    outline-offset: 3px;
+  }
+
+  .skip-link {
+    position: fixed;
+    top: -80px;
+    left: 16px;
+    z-index: 10;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: var(--ink);
+    color: var(--white);
+    transition: top 0.15s;
+  }
+
+  .skip-link:focus {
+    top: 16px;
+  }
+
+  .shell {
+    width: min(100% - 36px, 820px);
+    margin: 54px auto;
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Space Grotesk", Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .mark svg {
+    width: 34px;
+    height: 34px;
+    fill: var(--ink);
+  }
+
+  .mark .logo-node {
+    fill: var(--uplink);
+  }
+
+  .back {
+    font-size: 14px;
+  }
+
+  article {
+    padding: clamp(28px, 7vw, 64px);
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    background: var(--white);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Space Grotesk", Inter, sans-serif;
+    line-height: 1.18;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: clamp(34px, 6vw, 52px);
+    line-height: 1.08;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(22px, 4vw, 28px);
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 19px;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-top: 0;
+  }
+
+  code {
+    overflow-wrap: anywhere;
+  }
+
+  .eyebrow {
+    color: var(--gray-600);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .notice {
+    padding: 12px 16px;
+    border-left: 4px solid var(--uplink);
+    background: var(--gray-100);
+  }
+
+  footer {
+    margin-top: 22px;
+    color: var(--gray-600);
+    font-size: 13px;
+  }
+
+  footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 10px;
+  }
+
+  footer button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  @media (max-width: 520px) {
+    .shell {
+      margin-block: 28px;
+    }
+
+    .top {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>

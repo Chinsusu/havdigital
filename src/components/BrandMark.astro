@@ -1,0 +1,23 @@
+---
+interface Props {
+  className?: string;
+  label?: string;
+}
+
+const {
+  className = 'mark',
+  label = 'HAV Digital Solutions — về trang chủ',
+} = Astro.props;
+---
+
+<a class={className} href="/" aria-label={label}>
+  <svg aria-hidden="true" viewBox="0 0 96 96">
+    <rect x="24" y="20" width="12" height="56" rx="4"></rect>
+    <rect x="60" y="20" width="12" height="56" rx="4"></rect>
+    <rect x="36" y="43.5" width="24" height="9" rx="4.5"></rect>
+    <circle class="logo-node" cx="48" cy="48" r="7"></circle>
+    <rect class="logo-node" x="27.5" y="25" width="5" height="2.5" rx="1.25"></rect>
+    <rect class="logo-node" x="63.5" y="68.5" width="5" height="2.5" rx="1.25"></rect>
+  </svg>
+  <span>HAV</span>
+</a>
