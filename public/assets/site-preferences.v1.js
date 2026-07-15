@@ -106,7 +106,8 @@
     const accept = document.querySelector('[data-analytics-accept]');
     const reject = document.querySelector('[data-analytics-reject]');
 
-    const openPanel = () => {
+    const openPanel = (event) => {
+      event?.preventDefault();
       if (!panel) return;
       panel.hidden = false;
       accept?.focus();
