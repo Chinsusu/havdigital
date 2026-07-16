@@ -44,7 +44,7 @@ HAV xử lý dữ liệu để:
 - cung cấp, vận hành, đo mức sử dụng và hỗ trợ proxy/VPS;
 - xác thực, bảo vệ tài khoản, tài nguyên và hệ thống;
 - phát hiện, điều tra và xử lý gian lận, lạm dụng hoặc vi phạm [Chính sách sử dụng chấp nhận được](/acceptable-use);
-- đối soát thanh toán, lập chứng từ và giải quyết hoàn tiền hoặc tranh chấp;
+- đối soát thanh toán, lập chứng từ và giải quyết yêu cầu thanh toán hoặc tranh chấp;
 - trả lời yêu cầu về dữ liệu cá nhân;
 - thực hiện nghĩa vụ pháp luật hoặc yêu cầu hợp lệ của cơ quan có thẩm quyền;
 - cải thiện độ ổn định và trải nghiệm của website, trên cơ sở dữ liệu được giới hạn hoặc tổng hợp phù hợp.

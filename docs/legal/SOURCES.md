@@ -8,7 +8,7 @@ Research checked on 2026-07-16. These are primary government/legal sources or of
 - [Decree 248/2026/ND-CP detailing the Law on E-commerce](https://vanban.chinhphu.vn/?classid=0&docid=218747&pageid=27160), issued 2026-06-30 and effective 2026-07-01.
 - [Ministry of Industry and Trade explanation of the new Law and Decree](https://moit.gov.vn/tin-tuc/bo-cong-thuong-pho-bien-luat-thuong-mai-dien-tu-va-nghi-dinh-so-248-2026-nd-cp.html). The official summary emphasizes transparent seller, product/service, price, return/warranty and complaint information.
 
-Drafting impact: use final seller identity, disclose service limits and price/renewal/order terms before acceptance, provide complaint/refund channels, and avoid unqualified marketing claims.
+Drafting impact: use final seller identity, disclose service limits and price/renewal/order terms before acceptance, provide billing-dispute channels and preserve mandatory consumer rights, and avoid unqualified marketing claims.
 
 ## Consumer protection
 

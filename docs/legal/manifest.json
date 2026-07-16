@@ -8,7 +8,7 @@
     { "file": "contact.md", "route": "/contact", "indexable": true },
     { "file": "privacy.md", "route": "/privacy", "indexable": true, "ownerReviewRequired": true },
     { "file": "terms.md", "route": "/terms", "indexable": true, "ownerReviewRequired": true },
-    { "file": "refund-policy.md", "route": "/refund-policy", "indexable": true, "ownerReviewRequired": true },
+    { "file": "refund-policy.md", "route": "/refund-policy", "indexable": false, "ownerReviewRequired": true },
     { "file": "acceptable-use.md", "route": "/acceptable-use", "indexable": true, "ownerReviewRequired": true },
     { "file": "abuse.md", "route": "/abuse", "indexable": true },
     { "file": "sla.md", "route": "/sla", "indexable": true, "ownerReviewRequired": true },

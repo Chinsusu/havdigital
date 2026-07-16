@@ -21,7 +21,7 @@ internalLinks:
 
 HAV Digital Solutions đặt **mục tiêu vận hành 99,9% uptime theo tháng** cho thành phần proxy và VPS thuộc phạm vi HAV kiểm soát. Trang này giải thích cách hiểu và cách đánh giá mục tiêu đó.
 
-> Đây là mục tiêu vận hành chung, chưa phải SLA tài chính và không tự động tạo service credit. Một cam kết bồi hoàn chỉ có hiệu lực khi đơn hàng hoặc SLA riêng của khách hàng ghi rõ phạm vi, mức cam kết và cách tính credit.
+> Đây là mục tiêu vận hành chung, không phải SLA tài chính và không tạo service credit, bồi hoàn hay hoàn tiền.
 
 ## 1. Uptime được tính như thế nào
 
@@ -73,14 +73,14 @@ Gửi email tới [sales@havdigital.com](mailto:sales@havdigital.com?subject=%5B
 
 Báo cáo càng sớm và đầy đủ, HAV càng dễ xác định chính xác khoảng ảnh hưởng. Trang [Trạng thái hệ thống](/status) giải thích cách HAV phân loại và công bố sự cố.
 
-## 6. Khắc phục và hoàn tiền
+## 6. Khắc phục dịch vụ
 
-Ưu tiên đầu tiên của HAV là khôi phục dịch vụ, cấp lại tài nguyên hoặc cung cấp giải pháp thay thế phù hợp. Nếu lỗi HAV đã xác minh làm dịch vụ không thể sử dụng và không được khắc phục hợp lý, khách hàng có thể yêu cầu xử lý theo [Chính sách hoàn tiền](/refund-policy).
+Ưu tiên đầu tiên của HAV là khôi phục dịch vụ, cấp lại tài nguyên hoặc cung cấp giải pháp thay thế phù hợp. HAV không cam kết service credit hoặc hoàn tiền tự nguyện; xem [Chính sách không hoàn tiền](/refund-policy). Quyền bắt buộc theo pháp luật, nếu có, không bị loại trừ.
 
-Trang này không hứa credit tự động. Nếu HAV ban hành SLA tài chính trong tương lai, bảng credit, thời hạn claim và giới hạn phải được ghi trực tiếp trong SLA/đơn hàng, không áp dụng hồi tố.
+Trang này không hứa service credit, bồi hoàn hoặc hoàn tiền dưới bất kỳ hình thức tự nguyện nào.
 
 ## 7. Minh bạch số liệu
 
 HAV chỉ nên công bố tỷ lệ uptime lịch sử khi số liệu được lấy từ hệ thống giám sát xác định rõ thành phần, location, khoảng thời gian và cách loại trừ. Không suy rộng trải nghiệm của một khách hàng thành uptime toàn hệ thống.
 
-Xem thêm [Điều khoản sử dụng](/terms), [Chính sách hoàn tiền](/refund-policy) và [Liên hệ](/contact).
+Xem thêm [Điều khoản sử dụng](/terms), [Chính sách không hoàn tiền](/refund-policy) và [Liên hệ](/contact).

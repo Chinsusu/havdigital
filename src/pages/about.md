@@ -29,7 +29,7 @@ Cấu hình, dung lượng, chu kỳ sử dụng và giá áp dụng cho từng 
 
 - **“10M+ IP có thể tiếp cận”** mô tả quy mô pool ước tính mà mạng lưới có thể tiếp cận. Đây không phải số IP cam kết online đồng thời; khả dụng thay đổi theo quốc gia, nhà mạng và thời điểm.
 - **“IP sạch”** nghĩa là IP được sàng lọc theo nguồn blacklist mà HAV sử dụng trước khi cấp. Danh tiếng IP có thể thay đổi sau đó và HAV không bảo đảm một website hoặc nền tảng bên thứ ba sẽ luôn chấp nhận IP.
-- **“99,9% uptime”** hiện là mục tiêu vận hành, không tự động tạo thành cam kết bồi hoàn. Chỉ một SLA hoặc đơn hàng ghi rõ mức cam kết và cơ chế service credit mới tạo nghĩa vụ đó. Xem [Mục tiêu chất lượng dịch vụ](/sla).
+- **“99,9% uptime”** hiện là mục tiêu vận hành, không tạo thành cam kết bồi hoàn, service credit hay hoàn tiền. Xem [Mục tiêu chất lượng dịch vụ](/sla).
 
 ### Sử dụng hợp pháp
 

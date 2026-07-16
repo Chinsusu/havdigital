@@ -64,6 +64,6 @@ Gửi email tới [sales@havdigital.com](mailto:sales@havdigital.com?subject=%5B
 
 Không gửi mật khẩu, token, khóa riêng hoặc cookie đăng nhập. Xem [Liên hệ](/contact) để biết mẫu hỗ trợ đầy đủ. Nếu sự cố liên quan tới hành vi gây hại từ một tài nguyên HAV, dùng quy trình [Báo cáo lạm dụng](/abuse).
 
-## Uptime và bồi hoàn
+## Uptime và khắc phục dịch vụ
 
-Cách HAV định nghĩa mục tiêu 99,9%, phạm vi đo và loại trừ được công bố tại [Mục tiêu chất lượng dịch vụ](/sla). Trang trạng thái không tự tạo quyền service credit; quyền đó chỉ phát sinh khi đơn hàng hoặc SLA riêng ghi rõ.
+Cách HAV định nghĩa mục tiêu 99,9%, phạm vi đo và loại trừ được công bố tại [Mục tiêu chất lượng dịch vụ](/sla). Trang trạng thái không tạo quyền service credit, bồi hoàn hoặc hoàn tiền.

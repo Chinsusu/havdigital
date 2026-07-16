@@ -12,7 +12,7 @@ These files are Astro-ready Markdown page bodies. They intentionally contain no 
 | `contact.md` | `/contact` | index | Liên hệ |
 | `privacy.md` | `/privacy` | index after owner review | Quyền riêng tư |
 | `terms.md` | `/terms` | index after owner review | Điều khoản |
-| `refund-policy.md` | `/refund-policy` | index after owner review | Hoàn tiền |
+| `refund-policy.md` | `/refund-policy` | noindex | Không hoàn tiền |
 | `acceptable-use.md` | `/acceptable-use` | index after owner review | Sử dụng chấp nhận được |
 | `abuse.md` | `/abuse` | index | Báo cáo lạm dụng |
 | `sla.md` | `/sla` | index after owner accepts target wording | Mục tiêu dịch vụ |
@@ -52,11 +52,11 @@ If the project uses a content collection instead, map `route` explicitly and gen
 
 - `privacy.md` states default retention periods (90 days, 12 months and 24 months). Logging, mail retention and deletion jobs must match these statements before publication.
 - If analytics, session replay, advertising pixels, chat, a checkout provider or a customer dashboard is added, update the privacy policy and consent UI before collecting data.
-- The only verified contact is `sales@havdigital.com`. This pack uses subject prefixes to route sales, privacy, refund, incident and abuse mail. A separate mailbox may be added only after it actually exists and is monitored.
+- The only verified contact is `sales@havdigital.com`. This pack uses subject prefixes to route sales, privacy, billing, incident and abuse mail. A separate mailbox may be added only after it actually exists and is monitored.
 - `status.md` deliberately does not show “All systems operational.” Keep it `noindex` until status is backed by trustworthy monitoring. Do not generate green state from build time alone.
-- `sla.md` treats 99.9% as a target, not a financial SLA. Do not add automatic service credits unless the owner adopts a separate schedule and monitoring can calculate them.
-- `refund-policy.md` proposes operational targets of two working days for first response, seven working days for a decision after complete information and seven working days to issue an approved refund. The owner must confirm the team can meet these targets.
-- All order/checkout screens must show the selected service, price, billing period, limits, renewal behavior and links to Terms/AUP/Refund before acceptance. Record the version/date accepted.
+- `sla.md` treats 99.9% as an operating target, not a financial SLA. Do not add service credits, compensation or voluntary refunds.
+- `refund-policy.md` states that HAV offers no voluntary refunds, service credits or unused-balance returns. The owner must still confirm how mandatory legal obligations, billing errors and payment-provider disputes are handled.
+- All order/checkout screens must show the selected service, price, billing period, limits, renewal behavior and links to Terms/AUP/No-refund policy before acceptance. Record the version/date accepted.
 
 ## Publication gate
 

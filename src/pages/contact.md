@@ -34,11 +34,11 @@ Gửi email với tiêu đề **`[SALES] Tư vấn proxy/VPS`** và cho biết:
 
 [Gửi yêu cầu tư vấn](mailto:sales@havdigital.com?subject=%5BSALES%5D%20T%C6%B0%20v%E1%BA%A5n%20proxy%2FVPS)
 
-## Đơn hàng, thanh toán hoặc hoàn tiền
+## Đơn hàng, thanh toán hoặc sự cố dịch vụ
 
 Gửi email với tiêu đề **`[BILLING] Mã đơn hàng`**. Nêu mã đơn hàng, ngày thanh toán, dịch vụ liên quan và kết quả bạn mong muốn. Không gửi toàn bộ số thẻ, mã bảo mật, mật khẩu hoặc mã xác thực một lần qua email.
 
-Điều kiện đánh giá yêu cầu hoàn tiền được giải thích tại [Chính sách hoàn tiền](/refund-policy).
+HAV không có chương trình hoàn tiền tự nguyện; xem [Chính sách không hoàn tiền](/refund-policy). Nếu cần đối soát lỗi thanh toán hoặc cấu hình, hãy cung cấp thông tin để HAV kiểm tra.
 
 ## Sự cố kỹ thuật
 
